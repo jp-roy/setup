@@ -230,3 +230,30 @@ sudo apt-get install tmux
 ### Bash
 
 [Cheat sheet](https://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell-for-ubuntu-debian-suse-redhat-linux-etc/)
+
+
+### Grub2 Theme
+
+[Solarized Dark](https://www.gnome-look.org/p/1177401/)
+
+```bash
+curl -Ls https://github.com/Xyr0s1gn/grub2-solarized-dark/archive/master.zip
+sudo mkdir -p /boot/grub2/themes/
+sudo unzip grub2-solarized-dark-master.zip -d /boot/grub2/themes/
+```
+
+add (or edit existing lines) to grub
+
+```bash
+GRUB_THEME=/boot/grub2/themes/grub2-solarized-dark-master/theme.txt
+```
+
+```bash
+sudo gedit /etc/default/grub
+```
+
+save and exit file
+
+```bash
+sudo update-grub
+```
