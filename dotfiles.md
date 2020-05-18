@@ -1,7 +1,5 @@
 Credit goes [here](https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html)
 
-Copied here for backup
-
 ## Setup
 Git is the only dependency. The following four lines will set up the bare repository.
 
