@@ -91,14 +91,18 @@ ssh-add ~/.ssh/id_ed25519
 
 ## Dotfiles (Standard configuration)
 
-Inspired by the great default configuration provided by [Le Wagon](http://github.com/lewagon/dotfiles).
+Credit goes [here](https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html)
 
 ```bash
-export GITHUB_USERNAME=jp-roy
-mkdir -p ~/code/$GITHUB_USERNAME && cd $_ && git clone git@github.com:$GITHUB_USERNAME/dotfiles.git
+echo 'alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"' >> $HOME/.zshrc
+source ~/.zshrc
+echo ".dotfiles.git" >> .gitignore
+git clone --bare git@github.com:jp-roy/dotfiles.git $HOME/.dotfiles.git
+dotfiles checkout
+dotfiles config --local status.showUntrackedFiles no
 ```
 
-Run the `dotfiles` installer.
+### Sublime Text configuration
 
 ```bash
 cd ~/code/$GITHUB_USERNAME/dotfiles
