@@ -43,6 +43,18 @@ To make this change stick, restart your laptop
 sudo reboot
 ```
 
+Install zsh plugins
+```bash
+CURRENT_DIR=`pwd`
+ZSH_PLUGINS_DIR="$HOME/.oh-my-zsh/custom/plugins"
+mkdir -p "$ZSH_PLUGINS_DIR" && cd "$ZSH_PLUGINS_DIR"
+if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
+  echo "-----> Installing zsh plugin 'zsh-syntax-highlighting'..."
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+fi
+cd "$CURRENT_DIR"
+```
+
 ## Generate SSH keys
 [read this article](http://sebastien.saunier.me/blog/2015/05/10/github-public-key-authentication.html) to get a better
 understanding of what those keys are used for.
