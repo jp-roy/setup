@@ -1,4 +1,5 @@
 Credit goes [here](https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html)
+
 Copied here for backup
 
 ## Setup
@@ -41,10 +42,9 @@ dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 ```
 
-Creates alias to ensure that the git bare repository works without problem.
-Reload the shell setting to use that alias.
-Add .dotfiles.git directory to .gitignore to prevent recursion issues.
-Clone the repo.
-Check if it works fine.
-If you already have configuration files with identical names, checkout will fail. Back up and remove those files. Skip back up if you don’t need them.
-Prevent untracked files from showing up on dotfiles status.
+- Creates alias to ensure that the git bare repository works without problem.
+- Reload the shell setting to use that alias.
+- Add .dotfiles.git directory to .gitignore to prevent recursion issues.
+- Clone the repo.
+- Check if it works fine. If you already have configuration files with identical names, checkout will fail. Back up and remove those files. Skip back up if you don’t need them.
+- Prevent untracked files from showing up on dotfiles status.
