@@ -2,7 +2,7 @@
 
 Setup (largely) inspired by [Le Wagon](http://www.lewagon.org) fullstack bootcamp:
 
-- Grab a text editor, where you will spend your days and nights
+- Grab a text editor, where you will spend your days and nights... before migrating to vim
 - Install a package manager
 - Pimp your Terminal
 - Setup git and GitHub
@@ -104,25 +104,17 @@ dotfiles config --local status.showUntrackedFiles no
 
 ### Sublime Text configuration
 
+Creates symlink for Sublime Text 3 package configuration & settings from dotfiles
 ```bash
-cd ~/code/$GITHUB_USERNAME/dotfiles
-zsh install.sh
+SUBL_PATH=~/.config/sublime-text-3
+mkdir -p $SUBL_PATH/Packages/User $SUBL_PATH/Installed\ Packages
+backup "$SUBL_PATH/Packages/User/Preferences.sublime-settings"
+curl https://sublime.wbond.net/Package%20Control.sublime-package > $SUBL_PATH/Installed\ Packages/Package\ Control.sublime-package
+ln -s $HOME/.sublime-settings-preferences $SUBL_PATH/Packages/User/Preferences.sublime-settings
+ln -s $HOME/.sublime-settings-package-control $SUBL_PATH/Packages/User/Package\ Control.sublime-settings
+zsh ~/.zshrc
+echo "Quit your terminal and restart it"
 ```
-
-Then run the git installer:
-
-```bash
-cd ~/code/$GITHUB_USERNAME/dotfiles
-zsh git_setup.sh
-```
-
-:point_up: This will **prompt** you for your name (`Firstname Lastname`) and your email.
-
-Be careful, you **need** to put the **same** email as the one you sign up with on GitHub.
-
-Please now **quit** all your opened terminal windows.
-
-### Sublime Text auto-configuration
 
 Open a new terminal and type this:
 
