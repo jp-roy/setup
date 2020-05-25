@@ -214,7 +214,6 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 
 ```bash
 sudo apt-get install libavcodec-extra -y
-sudo apt-get install ripgrep
 ```
 
 ### Slack
@@ -239,3 +238,17 @@ sudo apt-get install tmux
 ### Bash
 
 [Cheat sheet](https://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell-for-ubuntu-debian-suse-redhat-linux-etc/)
+
+### Vim
+
+```bash
+sudo apt-get install ripgrep
+vim
+```
+
+in Vim, type :
+
+```bash
+:PlugInstall
+:PlugStatus
+```
