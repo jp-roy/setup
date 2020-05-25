@@ -213,7 +213,8 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 ## Extras
 
 ```bash
-sudo apt install libavcodec-extra -y
+sudo apt-get install libavcodec-extra -y
+sudo apt-get install ripgrep
 ```
 
 ### Slack
