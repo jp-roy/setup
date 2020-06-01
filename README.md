@@ -242,7 +242,7 @@ sudo apt-get install tmux
 ### Vim
 
 ```bash
-sudo apt-get install ripgrep
+sudo apt-get install ripgrep ctags
 vim
 ```
 
