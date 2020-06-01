@@ -2,10 +2,13 @@
 
 Setup (largely) inspired by [Le Wagon](http://www.lewagon.org) fullstack bootcamp:
 
+- Install git
 - Grab a text editor, where you will spend your days and nights...
 - ... before migrating to vim
 - Install a package manager
 - Pimp your Terminal
+- create ssh keys
+- fetch my dotfiles
 - Setup git and GitHub
 - Install Ruby
 - Extras ...
@@ -129,14 +132,9 @@ stt
 stt
 ```
 
-**Wait 1 minute** for additional packages to be automatically installed (New tabs with text will automatically open, containing documentation for each new package installed). TO follow package installation, you can go to `View > Show console`.
+**Wait 1 minute** for additional packages to be automatically installed (New tabs with text will automatically open, containing documentation for each new package installed). To follow package installation, you can go to `View > Show console`.
 
-To check if plugins are installed, open the Command Palette (`Ctrl` + `⇧` + `P` on Linux), type in `Packlist` and then `Enter`, you should see a couple of packages installed (like [Emmet](http://emmet.io/)).
-
-If you don't, please install all of them manually. The list is referenced [here](https://github.com/lewagon/dotfiles/blob/master/Package%20Control.sublime-settings).
-
-When it's done, you can close Sublime Text.
-
+close Sublime Text.
 
 ## Installing Ruby (with [rbenv](https://github.com/sstephenson/rbenv))
 
@@ -203,9 +201,7 @@ sudo -u postgres psql --command "CREATE ROLE `whoami` LOGIN createdb;"
 
 Ubuntu is always tracking changes in your folders, and to do this it uses inotify.
 By default the Ubuntu limit is set to 8192 files monitored.
-
-As programming involves a lot of files, we need to raise this limit.
-In your terminal run:
+I set it to 524288 instead :
 
 ```bash
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
