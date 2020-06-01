@@ -161,7 +161,7 @@ ruby -v
 
 You should see something starting with `ruby 2.6.6p`
 
-## Installing some gems
+Install a few **gems**
 
 ```bash
 gem install rake bundler rspec rubocop rubocop-performance pry pry-byebug hub colored octokit rb-readline
