@@ -2,7 +2,8 @@
 
 Setup (largely) inspired by [Le Wagon](http://www.lewagon.org) fullstack bootcamp:
 
-- Grab a text editor, where you will spend your days and nights... before migrating to vim
+- Grab a text editor, where you will spend your days and nights...
+- ... before migrating to vim
 - Install a package manager
 - Pimp your Terminal
 - Setup git and GitHub
