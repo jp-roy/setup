@@ -187,37 +187,18 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 
 ## Extras
 
-```bash
-sudo apt-get install libavcodec-extra -y
-```
-
-## Slack
-
-[Install Slack for Linux (beta)](https://get.slack.help/hc/en-us/articles/212924728-Slack-for-Linux-beta-).
-
-## FZF
+Install tmux, fzf, ctags, codecs
 
 ```bash
+sudo apt-get install libavcodec-extra ripgrep ctags tmux -y
+
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 $ ~/.fzf/install
 ```
 
-## Tmux
+### Install vim plugins :
 
 ```bash
-sudo apt-get install tmux
-```
-
-[Getting started](https://linuxize.com/post/getting-started-with-tmux/)
-
-## Bash
-
-[Cheat sheet](https://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell-for-ubuntu-debian-suse-redhat-linux-etc/)
-
-## Vim
-
-```bash
-sudo apt-get install ripgrep ctags
 vim
 ```
 
