@@ -6,7 +6,7 @@
 - generate ssh keys
 - fetch my dotfiles
 - Setup git and GitHub
-- Install Ruby
+- Install Ruby with asdf
 - Extras ...
 
 
@@ -124,9 +124,9 @@ stt
 
 close Sublime Text.
 
-## Installing Ruby (with [rbenv](https://github.com/sstephenson/rbenv))
+## Installing Ruby (with [asdf](https://asdf-vm.com/#/core-manage-asdf-vm) and a [zsh plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf))
 
-Remove rvm if it exists
+Remove previous installations using rvm or rbenv eventually :
 
 ```bash
 rvm implode && sudo rm -rf ~/.rvm
@@ -136,29 +136,21 @@ rvm implode && sudo rm -rf ~/.rvm
 rm -rf ~/.rbenv
 ```
 
-Then in the terminal, run:
+Then in the terminal, run the following to install ruby 2.6.2 (for example) :
 
 ```bash
-sudo apt install -y build-essential tklib zlib1g-dev libssl-dev libffi-dev libxml2 libxml2-dev libxslt1-dev libreadline-dev
-sudo apt clean
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+ asdf install ruby 2.6.6
+ 
+ # tell the system to use the 2.6.6 version by default
+ asdf global ruby 2.6.6
 ```
 
 **Close your terminal and open it again**
-If you get a warning, just **ignore** it from now (Ruby is not installed yet).
 
-Now, you are ready to install the latest ruby version, and set it as the default version.
-
-```bash
-rbenv install 2.6.6
-```
-
-Once the ruby installation is done, run this command to tell the system
-to use the 2.6.6 version by default.
+The following creates a `.tool-versions` file to the directory you're at when you ran it. It will contain the language and version you chose
 
 ```bash
-rbenv global 2.6.6
+ asdf local ruby 2.6.6
 ```
 
 **Restart** your Terminal again
