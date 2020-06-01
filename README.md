@@ -1,21 +1,16 @@
-# Setup instructions
-
-Setup (largely) inspired by [Le Wagon](http://www.lewagon.org) fullstack bootcamp:
-
-- Install git
-- Grab a text editor, where you will spend your days and nights...
+# Menu
+- git
+- Sublime text 3 for nostalgia
 - ... before migrating to vim
-- Install a package manager
-- Pimp your Terminal
-- create ssh keys
+- oh my zsh
+- generate ssh keys
 - fetch my dotfiles
 - Setup git and GitHub
 - Install Ruby
 - Extras ...
 
 
-## Install Git
-
+## Git
 
 ```bash
 sudo apt install -y git
@@ -60,21 +55,16 @@ cd "$CURRENT_DIR"
 ```
 
 ## Generate SSH keys
-[read this article](http://sebastien.saunier.me/blog/2015/05/10/github-public-key-authentication.html) to get a better
-understanding of what those keys are used for.
 
 ```bash
 mkdir -p ~/.ssh && ssh-keygen -t ed25519 -o -a 100 -f ~/.ssh/id_ed25519 -C "jproy@grazr.me"
 ```
 
-Then you need to give your **public** key to GitHub. Run:
-
 ```bash
 cat ~/.ssh/id_ed25519.pub
 ```
 
-Copy that text, then go to [github.com/settings/ssh](https://github.com/settings/ssh)
-
+Send the public key to [github.com/settings/ssh](https://github.com/settings/ssh)
 To check that this step is completed :
 
 ```bash
@@ -93,9 +83,7 @@ If it does not work, try running this before trying again the `ssh -T` command:
 ssh-add ~/.ssh/id_ed25519
 ```
 
-## Dotfiles (Standard configuration)
-
-Credit goes [here](https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html)
+## Dotfiles (using a git bare repository)
 
 ```bash
 echo 'alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"' >> $HOME/.zshrc
@@ -138,7 +126,7 @@ close Sublime Text.
 
 ## Installing Ruby (with [rbenv](https://github.com/sstephenson/rbenv))
 
-First we need to clean up any previous Ruby installation you might have:
+Remove rvm if it exists
 
 ```bash
 rvm implode && sudo rm -rf ~/.rvm
@@ -157,12 +145,10 @@ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 ```
 
-**Close your terminal and open it again** (Alt+F4 and restart it). If you get a warning, just **ignore** it from now (Ruby is not installed yet).
-
+**Close your terminal and open it again**
+If you get a warning, just **ignore** it from now (Ruby is not installed yet).
 
 Now, you are ready to install the latest ruby version, and set it as the default version.
-
-Run this command, it will **take a while (5-10 minutes)**
 
 ```bash
 rbenv install 2.6.6
@@ -175,13 +161,13 @@ to use the 2.6.6 version by default.
 rbenv global 2.6.6
 ```
 
-Then **restart** your Terminal again (close it and reopen it).
+**Restart** your Terminal again
 
 ```bash
 ruby -v
 ```
 
-You should see something starting with `ruby 2.6.6p`. If not, ask a teacher.
+You should see something starting with `ruby 2.6.6p`
 
 ## Installing some gems
 
