@@ -190,8 +190,12 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 Install tmux, fzf, ctags, codecs
 
 ```bash
-sudo apt-get install libavcodec-extra ripgrep ctags tmux -y
+sudo apt-get install -y libavcodec-extra ripgrep ctags tmux libreadline-dev vim-gtk3
 
+# silver-searcher
+sudo apt-get install -y silversearcher-ag automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+
+# FZF
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 $ ~/.fzf/install
 ```
