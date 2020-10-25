@@ -10,7 +10,7 @@
 - Extras ...
 
 
-## Install dependencies, utilities, vim, FZF...
+## Install dependencies, utilities, codecs, ctags, vim, FZF...
 ```
 sudo apt-get install -y libavcodec-extra ripgrep ctags tmux libreadline-dev vim-gtk3 silversearcher-ag automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev libpq-dev build-essential
 ```
@@ -191,17 +191,8 @@ I set it to 524288 instead :
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 
-## Extras
-
-Install tmux, fzf, ctags, codecs
-
-```bash
-sudo apt-get install -y libavcodec-extra ripgrep ctags tmux libreadline-dev vim-gtk3
-
-# silver-searcher
-sudo apt-get install -y silversearcher-ag automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
-
-# FZF
+## FZF
+```
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 $ ~/.fzf/install
 ```
