@@ -10,6 +10,11 @@
 - Extras ...
 
 
+## Install dependencies, utilities, vim, FZF...
+```
+sudo apt-get install -y libavcodec-extra ripgrep ctags tmux libreadline-dev vim-gtk3 silversearcher-ag automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev libpq-dev build-essential
+```
+
 ## Git
 
 ```bash
@@ -172,10 +177,9 @@ gem install rake bundler rspec rubocop rubocop-performance pry pry-byebug hub co
 ## Postgresql
 
 ```
-sudo apt install -y postgresql postgresql-contrib libpq-dev build-essential
+sudo apt install -y postgresql postgresql-contrib
 sudo -u postgres psql --command "CREATE ROLE `whoami` LOGIN createdb;"
 ```
-
 
 ## Ubuntu inotify
 
