@@ -21,6 +21,56 @@ sudo apt-get install -y libavcodec-extra ripgrep ctags tmux libreadline-dev vim-
 sudo apt install -y git
 ```
 
+## Ubuntu inotify
+
+Ubuntu is always tracking changes in your folders, and to do this it uses inotify.
+By default the Ubuntu limit is set to 8192 files monitored.
+I set it to 524288 instead :
+
+```bash
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
+
+## FZF
+```
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+$ ~/.fzf/install
+```
+
+# Grub boot splash screen
+```
+sudo vim /etc/default/grub
+```
+
+Use these vars :
+```
+GRUB_DEFAULT=0
+GRUB_TIMEOUT_STYLE=hidden
+GRUB_TIMEOUT=15
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_backlight=native thinkpad-acpi.brightness_enable=1"
+GRUB_CMDLINE_LINUX=""
+GRUB_GFXMODE=1024x768x32
+```
+
+Comment out the rest, save file, then :
+```sudo update-grub```
+
+### Install vim plugins :
+
+```bash
+vim
+```
+
+in Vim, type :
+
+```bash
+:PlugInstall
+:PlugStatus
+```
+
+
+
 ## Sublime Text 3
 
 ```bash
@@ -179,48 +229,4 @@ gem install rake bundler rspec rubocop rubocop-performance pry pry-byebug hub co
 ```
 sudo apt install -y postgresql postgresql-contrib
 sudo -u postgres psql --command "CREATE ROLE `whoami` LOGIN createdb;"
-```
-
-## Ubuntu inotify
-
-Ubuntu is always tracking changes in your folders, and to do this it uses inotify.
-By default the Ubuntu limit is set to 8192 files monitored.
-I set it to 524288 instead :
-
-```bash
-echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
-```
-
-## FZF
-```
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-$ ~/.fzf/install
-```
-
-# Grub boot splash screen
-Open grub file and use these vars :
-```
-GRUB_DEFAULT=0
-GRUB_TIMEOUT_STYLE=hidden
-GRUB_TIMEOUT=15
-GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_backlight=native thinkpad-acpi.brightness_enable=1"
-GRUB_CMDLINE_LINUX=""
-GRUB_GFXMODE=1024x768x32
-```
-
-Comment out the rest, save file, then :
-```sudo update-grub```
-
-### Install vim plugins :
-
-```bash
-vim
-```
-
-in Vim, type :
-
-```bash
-:PlugInstall
-:PlugStatus
 ```
