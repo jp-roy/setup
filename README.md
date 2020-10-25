@@ -200,6 +200,21 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 $ ~/.fzf/install
 ```
 
+# Grub boot splash screen
+Open grub file and use these vars :
+```
+GRUB_DEFAULT=0
+GRUB_TIMEOUT_STYLE=hidden
+GRUB_TIMEOUT=15
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_backlight=native thinkpad-acpi.brightness_enable=1"
+GRUB_CMDLINE_LINUX=""
+GRUB_GFXMODE=1024x768x32
+```
+
+Comment out the rest, save file, then :
+```sudo update-grub```
+
 ### Install vim plugins :
 
 ```bash
