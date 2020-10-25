@@ -136,6 +136,8 @@ rvm implode && sudo rm -rf ~/.rvm
 rm -rf ~/.rbenv
 ```
 
+Install asdf from `https://asdf-vm.com/#/core-manage-asdf?id=install`
+
 Then in the terminal, run the following to install ruby 2.6.2 (for example) :
 
 ```bash
