@@ -12,7 +12,7 @@
 
 ## Install dependencies, utilities, codecs, ctags, vim, FZF...
 ```
-sudo apt-get install -y libavcodec-extra ripgrep universal-ctags tmux libreadline-dev vim-gtk3 silversearcher-ag automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev libpq-dev build-essential
+sudo apt-get install -y libavcodec-extra ripgrep universal-ctags tmux libreadline-dev vim-gtk3 silversearcher-ag automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev libpq-dev build-essential fonts-firacode
 ```
 
 ## Git
