@@ -70,20 +70,6 @@ in Vim, type :
 ```
 
 
-
-## Sublime Text 3
-
-```bash
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-```
-
-```bash
-sudo apt install -y apt-transport-https
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt update
-sudo apt install -y sublime-text
-```
-
 ## Oh-my-zsh
 
 ```bash
@@ -149,7 +135,19 @@ dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 ```
 
-### Sublime Text configuration
+
+## Sublime Text 3
+
+```bash
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+```
+
+```bash
+sudo apt install -y apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt update
+sudo apt install -y sublime-text
+```
 
 Creates symlink for Sublime Text 3 package configuration & settings from dotfiles
 ```bash
