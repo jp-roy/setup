@@ -153,7 +153,6 @@ Creates symlink for Sublime Text 3 package configuration & settings from dotfile
 ```bash
 SUBL_PATH=~/.config/sublime-text-3
 mkdir -p $SUBL_PATH/Packages/User $SUBL_PATH/Installed\ Packages
-backup "$SUBL_PATH/Packages/User/Preferences.sublime-settings"
 curl https://sublime.wbond.net/Package%20Control.sublime-package > $SUBL_PATH/Installed\ Packages/Package\ Control.sublime-package
 ln -s $HOME/.sublime-settings-preferences $SUBL_PATH/Packages/User/Preferences.sublime-settings
 ln -s $HOME/.sublime-settings-package-control $SUBL_PATH/Packages/User/Package\ Control.sublime-settings
