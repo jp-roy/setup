@@ -227,3 +227,29 @@ gem install rake bundler rspec rubocop rubocop-performance pry pry-byebug hub co
 sudo apt install -y postgresql postgresql-contrib
 sudo -u postgres psql --command "CREATE ROLE `whoami` LOGIN createdb;"
 ```
+
+## Powertop
+
+To auto configure :
+```
+sudo powertop --auto-tune
+```
+
+To call powertop auto-tune automatically at boot time :
+```
+cat << EOF | sudo tee /etc/systemd/system/powertop.service
+[Unit]
+Description=PowerTOP auto tune
+
+[Service]
+Type=idle
+Environment="TERM=dumb"
+ExecStart=/usr/sbin/powertop --auto-tune
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl daemon-reload
+systemctl enable powertop.service
+```
