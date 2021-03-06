@@ -135,6 +135,17 @@ dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 ```
 
+## Terminal settings
+
+```bash
+dconf load /org/gnome/terminal/legacy/profiles:/ < ~/.gnome-terminal-profiles.dconf
+```
+
+To update these settings :
+```bash
+dconf dump /org/gnome/terminal/legacy/profiles:/ > ~/.gnome-terminal-profiles.dconf
+```
+
 
 ## Sublime Text 3
 
