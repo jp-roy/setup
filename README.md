@@ -9,6 +9,10 @@
 - Install Ruby with asdf
 - Extras ...
 
+## Disable caps lock key
+```bash
+setxkbmap -option caps:none
+```
 
 ## Install dependencies, utilities, codecs, ctags, vim, FZF...
 ```
