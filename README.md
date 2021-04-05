@@ -14,23 +14,12 @@
 setxkbmap -option caps:none
 ```
 
-## Install dependencies, utilities, codecs, ctags, vim, FZF...
+## Install git, dependencies, utilities, codecs, ctags, vim, FZF...
 ```
-sudo apt-get install -y libavcodec-extra ripgrep universal-ctags tmux libreadline-dev vim-gtk3 silversearcher-ag automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev libpq-dev build-essential fonts-firacode
-```
-
-## Git
-
-```bash
-sudo apt install -y git
+sudo apt-get install -y libavcodec-extra ripgrep universal-ctags tmux libreadline-dev vim-gtk3 silversearcher-ag automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev libpq-dev build-essential fonts-firacode git
 ```
 
-## Ubuntu inotify
-
-Ubuntu is always tracking changes in your folders, and to do this it uses inotify.
-By default the Ubuntu limit is set to 8192 files monitored.
-I set it to 524288 instead :
-
+## Set Ubuntu inotify limit at maximum
 ```bash
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
@@ -264,6 +253,11 @@ Install a few **gems**
 
 ```bash
 gem install rake bundler rspec rubocop rubocop-performance pry pry-byebug hub colored octokit rb-readline
+```
+
+Generate ctags
+```bash
+gctags
 ```
 
 ## Postgresql
