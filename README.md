@@ -1,13 +1,16 @@
 # Menu
-- git
-- Sublime text 3 for nostalgia
-- ... before migrating to vim
+- Install git, dependencies, utilities, codecs, ctags, vim, FZF... 
+- Set Ubuntu inotify limit at maximum
+- FZF
+- Editing Grub boot splash screen
+- Vim plugins
 - oh my zsh
 - generate ssh keys
-- fetch my dotfiles
-- Setup git and GitHub
-- Install Ruby with asdf
-- Extras ...
+- Dotfiles (using a git bare repository)
+- Terminal settings
+- Sublime Text 3
+- Ruby on Rails
+- Postgresql
 
 ## Disable caps lock key
 ```bash
@@ -30,7 +33,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 $ ~/.fzf/install
 ```
 
-# Grub boot splash screen
+## Grub boot splash screen
 ```
 sudo vim /etc/default/grub
 ```
@@ -49,7 +52,7 @@ GRUB_GFXMODE=1024x768x32
 Comment out the rest, save file, then :
 ```sudo update-grub```
 
-### Install vim plugins :
+## Vim plugins
 
 ```bash
 vim
@@ -210,7 +213,9 @@ stt
 
 close Sublime Text.
 
-## Installing Ruby (with [asdf](https://asdf-vm.com/#/core-manage-asdf-vm) and a [zsh plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf))
+## Ruby on Rails
+
+with [asdf](https://asdf-vm.com/#/core-manage-asdf-vm) and a [zsh plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf))
 
 Remove previous installations using rvm or rbenv eventually :
 
