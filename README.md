@@ -178,9 +178,8 @@ dconf dump /org/gnome/terminal/legacy/profiles:/ > ~/.gnome-terminal-profiles.dc
 
 To list all properties that can be configured :
 ```bash
-dconf dump /org/gnome/terminal/legacy/profiles:/ > ~/.gnome-terminal-profiles.dconf
-```
 gsettings list-keys org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/
+```
 
 ## Sublime Text 3
 
