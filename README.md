@@ -11,17 +11,12 @@
 - Sublime Text 3
 - Ruby on Rails
 - Postgresql
-
-## Disable caps lock key
-```bash
-setxkbmap -option caps:none
-```
+- Extras
 
 ## Install git, dependencies, utilities, codecs, ctags, vim, FZF...
 ```
 sudo apt-get install -y libavcodec-extra ripgrep universal-ctags tmux libreadline-dev vim-gtk3 silversearcher-ag automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev libpq-dev build-essential fonts-firacode git
 ```
-
 ## Set Ubuntu inotify limit at maximum
 ```bash
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
@@ -270,4 +265,11 @@ gctags
 ```
 sudo apt install -y postgresql postgresql-contrib
 sudo -u postgres psql --command "CREATE ROLE `whoami` LOGIN createdb;"
+```
+
+## Extras
+
+### Disable caps lock key
+```bash
+setxkbmap -option caps:none
 ```
