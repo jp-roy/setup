@@ -1,5 +1,5 @@
 # Menu
-- Install git, dependencies, utilities, codecs, ctags, vim, FZF... 
+- Install git, dependencies, utilities, codecs, ctags, vim, FZF...
 - Set Ubuntu inotify limit at maximum
 - FZF
 - Editing Grub boot splash screen
@@ -48,6 +48,8 @@ Comment out the rest, save file, then :
 ```sudo update-grub```
 
 ## Vim plugins
+
+Download `Symbols-1000-em Nerd Font Complete.ttf`, click on it and then on `Install` button
 
 ```bash
 vim
@@ -228,7 +230,7 @@ Then in the terminal, run the following to install ruby 2.6.2 (for example) :
 
 ```bash
  asdf install ruby 2.6.6
- 
+
  # tell the system to use the 2.6.6 version by default
  asdf global ruby 2.6.6
 ```
